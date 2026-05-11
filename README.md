@@ -31,11 +31,14 @@ I configured a loopback interface on each router through the "interface l0" comm
 <img width="835" height="525" alt="Screenshot 2026-05-11 at 1 34 01 PM" src="https://github.com/user-attachments/assets/7f2d9e0c-f4f3-4e6a-afa4-42dde3a7a10b" />
 
 
-### 3. Assign the last usable address to the router's interface in each LAN
+### 3. Enable OSPF on each interface of the routers.
 
-I went into the router's CLI. I went into each interface, turned on the port with the command "no shutdown." I added the last usable address to the respected interface, and repeated the process for the other LANs, as well as the point-to-point connection.
+I then enabled OSPF on each interface of each router by going into the interface and applying the "ip ospf 1 area 0" command in the CLI. I added a "passive-interface" command on the routers connected to end hosts so that no unnecessary OSPF traffic is being sent.
 
-<img width="1027" height="277" alt="Screenshot 2026-03-22 at 12 46 00 PM" src="https://github.com/user-attachments/assets/e32fe9b7-48b0-4123-a921-571dbb103e51" />
+<img width="793" height="187" alt="Screenshot 2026-05-11 at 2 21 09 PM" src="https://github.com/user-attachments/assets/8d7a8c68-0c5b-43be-b2a7-14f3e211c1a2" />
+<img width="586" height="186" alt="Screenshot 2026-05-11 at 2 21 22 PM" src="https://github.com/user-attachments/assets/3ffef31f-40ff-4b42-bf65-c75e6301c31f" />
+
+
 
 ### 4. Configure static routes on each router so that all PCs can ping each other.
 
