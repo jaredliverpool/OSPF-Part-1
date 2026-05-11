@@ -58,4 +58,9 @@ I also created a default route in R1 so that the routers and the PC can connect 
 
 <img width="824" height="126" alt="Screenshot 2026-05-11 at 3 17 07 PM" src="https://github.com/user-attachments/assets/83a8a9a5-9703-4378-8e94-64cabfc861df" />
 
+### 6. Check the routing tables of R4.
+
+The routing table in R4 shows that a default route was configured in the network by the verification "Gateway of last resort is 10.0.24.1 to network 0.0.0.0." The Router also shows the default route was configured by the route "O*E2 0.0.0.0/0 [110/1] via 10.0.24.1, 00:18:39, FastEthernet1/0."
+
+<img width="844" height="533" alt="Screenshot 2026-05-11 at 3 18 56 PM" src="https://github.com/user-attachments/assets/6d208af5-46fa-4fbe-b157-b262b37f5af4" />
 
