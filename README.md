@@ -48,8 +48,14 @@ The OSPF cost is calculated by dividing the reference bandwidth by the interface
 <img width="925" height="73" alt="Screenshot 2026-05-11 at 3 00 45 PM" src="https://github.com/user-attachments/assets/d3e4a430-c42a-4768-99c7-40b1582a8a00" />
 
 
-### 5. Test the connection by sending pings from one PC to the next
+### 5. Configure R1 as an ASBR that advertises a default route in to the OSPF domain.
 
-I tested the connection to see if the PCs can oing each other. Sure enough, they did.
+I applied a "default-information originate" command into R1 which turns the Router into an ASBR.
 
-<img width="1090" height="860" alt="Screenshot 2026-03-22 at 1 05 01 PM" src="https://github.com/user-attachments/assets/a1f2172c-076f-4dbf-823a-e7e8c7196db7" />
+<img width="716" height="172" alt="Screenshot 2026-05-11 at 3 00 36 PM" src="https://github.com/user-attachments/assets/cbb2e5a0-3225-4015-a827-f172d62b02c7" />
+
+I also created a default route in R1 so that the routers and the PC can connect to the Internet using the "ip route" command and connecting it to the ISPR device as the next route.
+
+<img width="824" height="126" alt="Screenshot 2026-05-11 at 3 17 07 PM" src="https://github.com/user-attachments/assets/83a8a9a5-9703-4378-8e94-64cabfc861df" />
+
+
