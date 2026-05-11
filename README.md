@@ -43,7 +43,7 @@ I then enabled OSPF on each interface of each router by going into the interface
 
 ### 4. Configure the reference bandwidth on each router so a FastEthernet interface has a cost of 100.
 
-I went into each router's CLI once more and I confired the static routes so that I have a route to each LAN on the other router.
+The OSPF cost is calculated by dividing the reference bandwidth by the interface's bandwidth. The default reference bandwidth is 100 mps. If I calculate the cost of an OSPF, and the value is less than one, the cost will be converted to one. So the default cost of an Ethernet interface will be 10 (100 mps / 10 mps). The default cost of a Gigabit interface would be one (100 mps / 1000 mps). Our job is to make sure that a FastEthernet interface has a cost of 100. And every router in the network has to have a matching reference bandwidth. So I changed the reference bandwidth to 10,000 using this command "auto-cost reference-bandwidth."
 
 <img width="854" height="69" alt="Screenshot 2026-03-22 at 12 58 14 PM" src="https://github.com/user-attachments/assets/bed9f143-085f-4b45-93de-299f33143f18" />
 
