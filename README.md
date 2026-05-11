@@ -41,7 +41,7 @@ I then enabled OSPF on each interface of each router by going into the interface
 
 
 
-### 4. Configure static routes on each router so that all PCs can ping each other.
+### 4. Configure the reference bandwidth on each router so a FastEthernet interface has a cost of 100.
 
 I went into each router's CLI once more and I confired the static routes so that I have a route to each LAN on the other router.
 
