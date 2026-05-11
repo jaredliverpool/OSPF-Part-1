@@ -14,13 +14,14 @@ My job is to configure all the routers in network and enable OSPF on them so tha
 
 ## Steps Taken
 
-### 1. Assign the largest subnet at the start of the address space. Then assign the second-largest subnet after it. Repeat the process until all subnets have been assigned.
+### 1. Configure the routers and enable them.
 
-In the lab, the largest subnet is LAN 2 with 64 hosts so this is the first subnet chosen. I borrowed seven bits so all 64 hosts can fit in the subnet. The borrowed hosts came out to 126 hosts, making LAN 2 a /25 subnet. The network address of LAN 2 is 192.168.5.0/25 when you turn all the borrowed bits into zeros. The first usable address is 192.168.5.1/25. The broadcast address is 192.168.5.127/25 because I turned all the borrowed bits into ones. Making the last usable address 192.168.5.126/25.
+I first configured hostnames for each router using the "hostname" command in the CLI command. I called the first Router R1, I called the second Router R2, etc. Then I configured the ip address and the subnet mask on each interface, then  I enabled them using the "no shutdown" command.
 
-I repeated the process for the other three LANs including the point-to-point connection. I did the subnetting process in the screenshot below.
+I repeated the process for the other three routers.
 
-![IMG_3201](https://github.com/user-attachments/assets/197a3536-3a59-4fac-b6bf-451fe39e3739)
+<img width="835" height="525" alt="Screenshot 2026-05-11 at 1 34 01 PM" src="https://github.com/user-attachments/assets/b29d15b2-d833-4ad7-9b01-1a1f9e809e6b" />
+
 
 ### 2. Assign the first usable address to the PC in each LAN
 
