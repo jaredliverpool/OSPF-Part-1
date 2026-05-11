@@ -8,7 +8,8 @@ In This project, I will enable OSPF on the routers, and configure them to make s
 
 My job is to configure all the routers in network and enable OSPF on them so that PC1 can send traffic through the devices in a timely manner as well as connect to the internet.
 
-<img width="753" height="332" alt="Screenshot 2026-03-21 at 6 23 48 PM" src="https://github.com/user-attachments/assets/cff0b307-69c5-43f1-a90b-ac6f0bed3260" />
+<img width="894" height="288" alt="Screenshot 2026-05-11 at 1 23 11 PM" src="https://github.com/user-attachments/assets/7ab28300-ab77-4388-af8e-dc34fd287d63" />
+
 
 ---
 
@@ -23,11 +24,12 @@ I repeated the process for the other three routers.
 <img width="835" height="525" alt="Screenshot 2026-05-11 at 1 34 01 PM" src="https://github.com/user-attachments/assets/b29d15b2-d833-4ad7-9b01-1a1f9e809e6b" />
 
 
-### 2. Assign the first usable address to the PC in each LAN
+### 2. Configure a loopback interface on each router.
 
-I went into the "Config" settings for each PC. I added the first usable address to the PC, then I added the last usuable address to the default gateway, aka the router. I repeated the steps for LAN 1, 3, and 4.
+I configured a loopback interface on each router through the "interface l0" command. I added a loopback interface (which is a virtual interface) on each router as a backup interface for the physical interface. I configured the ip address 1.1.1.1/32 for R1. 2.2.2.2/32 for R2. Etc.
 
-<img width="1690" height="1035" alt="Screenshot 2026-03-21 at 11 05 20 PM" src="https://github.com/user-attachments/assets/5ff7ffc0-4156-4de2-bd23-dcf4240ac781" />
+<img width="835" height="525" alt="Screenshot 2026-05-11 at 1 34 01 PM" src="https://github.com/user-attachments/assets/7f2d9e0c-f4f3-4e6a-afa4-42dde3a7a10b" />
+
 
 ### 3. Assign the last usable address to the router's interface in each LAN
 
